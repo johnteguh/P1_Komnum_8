@@ -39,4 +39,5 @@ print('============================')
 if i == itr_max - 1:
     print('\n\n Sudah Dilakukan Iterasi maksimum!!!')
     print('Didapatkan Nilai akar: '+ str(xt))
+   
 print("\n")
