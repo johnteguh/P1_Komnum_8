@@ -11,17 +11,17 @@ x1 = float(input("Masukkan x1: "))
 x2 = float(input("Masukkan x2: "))      
  
 # Memeriksa apakah value x1 dan x2 sesuai syarat
-if (f(x1) > 0 and f(x2) < 0) or (f(x1) < 0 and f(x2)>0):
+if (f(x1) > 0 and f(x2) < 0) or (f(x1) < 0 and f(x2) > 0):
     print('Angka Tidak sesuai karena x1 dan x2 bertanda sama')
     exit()
 
 for i in range(itr_max):
     xt = (x1 + x2)/2
     # Output hasil sesuai iterasi
-    print("i:"+str(i + 1)+".")
-    print("x1: "+'%10.8f'%(x1)+"")
-    print("x2: "+'%10.8f'%(x2)+"")
-    print("xt: "+'%10.8f'%(xt)+"")
+    print("i:" + str(i + 1) + ".")
+    print("x1: " + '%10.8f'%(x1))
+    print("x2: " + '%10.8f'%(x2))
+    print("xt: " + '%10.8f'%(xt))
     print("f(xt):"+'%10.8f' %(f(xt))+"\n\n")
  
     if np.abs(f(xt)) < teliti:
