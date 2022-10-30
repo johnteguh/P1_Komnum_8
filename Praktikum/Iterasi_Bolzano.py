@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
  
-#Mendefinisikan fungsi
+#Menentuk fungsi yang akan dihitung
 def f(x):
     return (x**3+x**2-3*x-3)
  
@@ -12,22 +12,20 @@ x2 = float(input("Masukkan x2: "))
  
 # Memeriksa apakah value x1 dan x2 sesuai syarat
 if f(x1) * f(x2) > 0:
-    print('Angka tidak memenuhi kriteria bolzano (bertanda sama)')
+    print('Angka Tidak sesuai karena x1 dan x2 bertanda sama')
     exit()
- 
-
-print('----------------------------------------------------------------------------')
-print('iterasi \t x1\t\t x2\t\t xt\t\t f(xt)        ')
-print('----------------------------------------------------------------------------')
 
 for i in range(itr_max):
     xt = (x1 + x2)/2
-
     # Output hasil sesuai iterasi
-    print(str(i + 1)+'\t\t% 10.8f\t% 10.8f\t% 10.8f\t% 10.8f\t' %(x1, x2, xt, f(xt)))
+    print("i:"+str(i + 1)+".")
+    print("x1: "+'%10.8f'%(x1)+"")
+    print("x2: "+'%10.8f'%(x2)+"")
+    print("xt: "+'%10.8f'%(xt)+"")
+    print("f(xt):"+'%10.8f' %(f(xt))+"\n\n")
  
     if np.abs(f(xt)) < teliti:
-        print('----------------------------------------------------------------------------')
+        print('=========================')
         print('Nilai akar: '+ str(xt))
         exit()
 
@@ -37,9 +35,8 @@ for i in range(itr_max):
     else: 
         x1 = xt
  
-print('----------------------------------------------------------------------------')
-if i == iterasi_maks - 1:
-    print('\n\nIterasi maksimum!!!')
-    print('Nilai akar: '+ str(xt))
-
+print('============================')
+if i == itr_max - 1:
+    print('\n\n Sudah Dilakukan Iterasi maksimum!!!')
+    print('Didapatkan Nilai akar: '+ str(xt))
 print("\n")
