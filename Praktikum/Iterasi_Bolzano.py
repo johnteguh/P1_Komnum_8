@@ -11,7 +11,7 @@ x1 = float(input("Masukkan x1: "))
 x2 = float(input("Masukkan x2: "))      
  
 # Memeriksa apakah value x1 dan x2 sesuai syarat
-if f(x1) * f(x2) > 0:
+if (f(x1) > 0 and f(x2) < 0) or (f(x1) < 0 and f(x2)>0):
     print('Angka Tidak sesuai karena x1 dan x2 bertanda sama')
     exit()
 
@@ -39,5 +39,5 @@ print('============================')
 if i == itr_max - 1:
     print('\n\n Sudah Dilakukan Iterasi maksimum!!!')
     print('Didapatkan Nilai akar: '+ str(xt))
-   
+
 print("\n")
